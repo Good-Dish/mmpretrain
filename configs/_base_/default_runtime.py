@@ -13,7 +13,7 @@ default_hooks = dict(
     param_scheduler=dict(type='ParamSchedulerHook'),
 
     # save checkpoint per epoch.
-    checkpoint=dict(type='CheckpointHook', interval=1),
+    checkpoint=dict(type='CheckpointHook', interval=1),  # 建议不要每一个epoch都保存，占地太大
 
     # set sampler seed in distributed evrionment.
     sampler_seed=dict(type='DistSamplerSeedHook'),

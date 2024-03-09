@@ -9,7 +9,7 @@ data_preprocessor = dict(
     to_rgb=True,
 )
 
-train_pipeline = [
+train_pipeline = [  # 预处理操作
     dict(type='LoadImageFromFile'),
     dict(type='RandomResizedCrop', scale=224),
     dict(type='RandomFlip', prob=0.5, direction='horizontal'),
